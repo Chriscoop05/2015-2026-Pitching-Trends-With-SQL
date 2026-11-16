@@ -1,8 +1,8 @@
 library(tidyverse)
 library(DBI)
 
-# ---------------------------------------------------------------------------
-# Database connection
+
+
 # All connection details are read from environment variables so no credentials
 # live in this file. Set them in an untracked .Renviron file, e.g.:
 #   DB_NAME=your_database
@@ -11,7 +11,7 @@ library(DBI)
 #   DB_USER=your_user
 #   DB_PWD=your_password
 # (.Renviron is git-ignored in this repo.)
-# ---------------------------------------------------------------------------
+
 con = dbConnect(
   RMariaDB::MariaDB(),
   dbname   = Sys.getenv("DB_NAME"),
